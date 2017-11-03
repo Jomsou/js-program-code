@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style>
+	#div1{
+		width: 150px;
+		height: 150px;
+		background: #fff;
+		border: 1px solid #000;
+	}
+</style>
+</head>
+<body>
+	<script>
+		function toChange(color){
+			var colors = document.getElementById('div1');
+			colors.style.background = color;
+		}
+	</script>
+   <input type="button" value="变红" onclick="toChange('red')">
+   <input type="button" value="变黑" onclick="toChange('black')">
+   <input type="button" value="变黄" onclick="toChange('yellow')">
+   <div id="div1">
+   </div>
+</body>
+</html>

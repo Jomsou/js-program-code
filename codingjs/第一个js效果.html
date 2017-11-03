@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style>
+	#div1 {
+		width: 200px;
+		height: 200px;
+		background-color: gray;
+		border: 1px solid #000;
+		display: none;
+	}
+</style>
+<script>
+function active(num) {
+		var oDiv = document.getElementById('div1');
+		oDiv.style.display = num;
+	}
+	/*function active(num) {
+		var oDiv = document.getElementById('div1');
+		oDiv.style.display = 'block';
+	}
+	function hidden() {
+		var oDiv = document.getElementById('div1');
+		oDiv.style.display = 'none';
+	}*/
+</script>
+</head>
+<body>
+    <!-- <input type="checkbox" onmouseover="show()" onmouseout="hidden()"> -->
+    <input type="checkbox" onmouseover="active('block')" onmouseout="active('none')">
+    <div id="div1">
+    	请注意安全。。。。
+    </div>
+</body>
+</html>

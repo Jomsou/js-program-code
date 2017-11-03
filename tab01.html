@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style>
+#div1 .active{
+	background: orange;
+}
+#div1 {
+	background: #fff;
+}	
+#div1 div{
+	width: 200px;
+	height: 200px;
+	background: #999;
+	border: 1px solid #fff;
+	display: none;
+}
+</style>
+<script>
+	window.onload = function ()
+	{
+		var oDiv = document.getElementById('div1');
+		var aBtn = oDiv.getElementsByTagName('input');
+		var aDiv = oDiv.getElementsByTagName('div');
+		for (var i=0;i<aBtn.length;i++)
+		{
+			aBtn[i].index = i;
+			aBtn[i].onclick = function()
+			{
+				for (var i=0;i<aBtn.length;i++)
+				{
+					aBtn[i].className = '';			
+					aDiv[i].style.display = 'none';
+				}
+				this.className = 'active';
+				aDiv[this.index].style.display = 'block';
+			}
+		}
+	};
+</script>
+</head>
+<body>
+	<div id="div1">
+	    <input type="button" value="教育" class="active">
+	    <input type="button" value="新闻">
+	    <input type="button" value="媒体">
+	    <input type="button" value="留学">
+	    <div style="display: block;">111</div>
+	    <div>222</div>
+	    <div>333</div>
+	    <div>444</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script>
+	window.onload = function () {
+		var oBtn1 = document.getElementById('btn1');
+		var oBtn2 = document.getElementById('btn2');
+		var oBtn3 = document.getElementById('btn3');
+		var oDiv = document.getElementById('div1');
+		var aCh = oDiv.getElementsByTagName('input');
+		oBtn1.onclick = function(){
+			for(var i=0;i<aCh.length;i++){
+				aCh[i].checked = true;
+			}
+		}
+		oBtn2.onclick = function(){
+			for(var i=0;i<aCh.length;i++){
+				aCh[i].checked = false;
+			}
+		}
+		oBtn3.onclick = function(){
+			for(var i=0;i<aCh.length;i++){
+				if(aCh[i].checked){
+					aCh[i].checked = false;
+				}
+				else{
+					aCh[i].checked = true;
+				}
+			}
+		}
+	}
+</script>
+</head>
+<body>
+    <input type="button" value="全选" id="btn1">
+    <input type="button" value="不选" id="btn2">
+    <input type="button" value="反选" id="btn3">
+	<div id="div1">
+	    <input type="checkbox">
+	    <input type="checkbox">
+	    <input type="checkbox">
+	    <input type="checkbox">
+	    <input type="checkbox">
+	    <input type="checkbox">
+	    <input type="checkbox">
+	    <input type="checkbox">
+	    <input type="checkbox">
+    </div>
+</body>
+</html>
